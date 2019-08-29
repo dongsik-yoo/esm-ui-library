@@ -1,0 +1,33 @@
+{
+  "header": {
+    "logo": {
+      "src": "https://uicdn.toast.com/toastui/img/tui-component-bi-white.png",
+      "linkUrl": "/"
+    },
+    "title": {
+      "text": "Calendar",
+      "linkUrl": "https://github.com/nhn/toast-ui.doc"
+    },
+    "version": true
+  },
+  "footer": [
+    {
+      "title": "NHN",
+      "linkUrl": "https://github.com/nhn"
+    },
+    {
+      "title": "FE Development Lab",
+      "linkUrl": "https://github.com/nhn/fe.javascript"
+    }
+  ],
+  "main": {
+    "filePath": "README.md"
+  },
+  "api": {
+    "filePath": "dist/esm",
+    "permalink": {
+      "repository": "https://github.com/nhn/toast-ui.doc",
+      "ref": "master"
+    }
+  }
+}

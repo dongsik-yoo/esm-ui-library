@@ -1,0 +1,64 @@
+{
+  "name": "esm-ui-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/esm-ui-library.js",
+  "module": "dist/esm/",
+  "sideEffects": false,
+  "files": [
+    "src",
+    "dist",
+    "index.d.ts"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dongsik-yoo/esm-ui-library.git"
+  },
+  "scripts": {
+    "doc": "tuidoc",
+    "serve": "DEV_SERVER=true webpack-dev-server --mode development",
+    "build:dev": "webpack --mode development",
+    "build:prod": "NODE_ENV=production webpack --mode production",
+    "build:esm": "ttsc -p tsconfig.esm.json",
+    "build": "rm -rf dist && npm run build:dev && npm run build:prod && npm run build:esm",
+    "analyze": "NODE_ENV=production webpack --mode production --profile --json > stats.json && webpack-bundle-analyzer stats.json ./dist"
+  },
+  "author": "Dongsik Yoo",
+  "license": "MIT",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "css-loader": "^3.2.0",
+    "eslint": "^6.2.2",
+    "eslint-config-prettier": "^6.1.0",
+    "eslint-config-tui": "^2.2.0",
+    "eslint-loader": "^3.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "postcss-prefixer": "^2.1.1",
+    "prettier": "^1.18.2",
+    "sass-loader": "^7.3.1",
+    "style-loader": "^1.0.0",
+    "stylelint": "^10.1.0",
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-scss": "^3.10.0",
+    "stylelint-webpack-plugin": "^0.10.5",
+    "ts-loader": "^6.0.4",
+    "ttypescript": "^1.5.7",
+    "typescript": "^3.5.3",
+    "typescript-transform-paths": "^1.1.10",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "dependencies": {
+    "preact": "^8.5.2",
+    "preact-render-to-string": "^4.1.0"
+  }
+}
